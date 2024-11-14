@@ -9,4 +9,4 @@
 
 ## Topologi CPT 
 
-![alt text](TopologiModul3.png)
+![alt text](Topo_CPT.png)
