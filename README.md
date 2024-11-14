@@ -23,4 +23,4 @@ CIDR (Classless Inter-Domain Routing) adalah metode dalam jaringan komputer untu
 | Nama Subnet          | Rute       | Jumlah IP       | Netmask      | 
 | -- | ---------- | ---------- | ---------- |
 | A1  | Hololive -> HoloID | 2 | /30 | 
-| A2 | | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
+| A2 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
