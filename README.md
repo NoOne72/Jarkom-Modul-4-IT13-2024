@@ -33,14 +33,15 @@ CIDR (Classless Inter-Domain Routing) adalah metode dalam jaringan komputer untu
 | A9  |Hololive -> HoloJP -> Switch1 -> DEV_IS -> Switch1 -> GEN:0 | 3 | /29 | 
 | A10 |Hololive -> HoloJP -> Switch1 -> DEV_IS -> Re:Gloss -> Ririka_Raden -> Re:Gloss -> Ao -> Re:Gloss-> Hajime_Kanade | 14 | /28 | 
 | A11  | Hololive -> HoloJP -> Switch1 -> GEN:0 -> Switch3 -> MiComet -> Switch3 -> Sora_Robo_AZK -> Switch3 -> GEN:1 | 2045 | /21 | 
-| A12 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
-| A13  | Hololive -> HoloID | 2 | /30 | 
-| A14 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
-| A15  | Hololive -> HoloID | 2 | /30 | 
-| A16 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
-| A17  | Hololive -> HoloID | 2 | /30 | 
-| A18 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
-| A19  | Hololive -> HoloID | 2 | /30 | 
-| A20 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
-| A21  | Hololive -> HoloID | 2 | /30 | 
-| A22 | Hololive -> HoloID -> AREA-15 | 2 | /30 | 
+| A12 | Hololive -> HoloJP -> Switch1 -> GEN:0 -> Switch3 -> GEN:1 -> Member -> FBK_Matsuri -> Member -> Aki_Hachama | 470 | /23 | 
+| A13  | Hololive -> HoloJP -> Switch1 -> GEN:0 -> Switch3 -> GEN:1 -> GAMERS | 2 | /30 | 
+| A14 | Hololive > HoloJP > Switch1 > GEN:0 > Switch3 > GEN:1 > GAMERS > Fubuki > Korone -> Fubuki -> Okayu -> Fubuki -> Mio | 120 | /25 | 
+| A15  | Hololive -> HoloEN | 2 | /30 | 
+| A16 | Hololive -> HoloEN -> HoloAdvent | 2 | /30 | 
+| A17  | Hololive > HoloEN > HoloAdvent > Switch0 > FuwaMoco -> Switch0 -> Shiori_Nerissa -> Switch0 -> Biboo | 28 | /27 | 
+| A18 | Hololive -> HoloEN -> Holo-Myth | 2 | /30 | 
+| A19  | Hololive -> HoloEN -> Holo-Myth -> Switch2 -> Gura_Ame_Ina -> Switch2 -> Kiara_Calli | 509 | /23 | 
+| A20 | Hololive -> HoloEN -> Holo-Myth -> HoloPromise -> Project-Hope -> HoloPromise -> Holo_Council | 3 | /29 | 
+| A21  | Hololive -> HoloEN -> Holo-Myth -> HoloPromise -> Project-Hope -> Irys | 3 | /29 | 
+| A22 | Hololive -> HoloEN -> Holo-Myth -> HoloPromise -> Holo-Council -> Switch4 -> Kronii_Mumei -> Switch4 -> Bae_Fauna | 62 | /26 | 
+| Total |  | 4263 | /19 | 
