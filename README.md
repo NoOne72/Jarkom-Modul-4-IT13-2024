@@ -35,7 +35,7 @@ VLSM (Variable Length Subnet Mask) adalah metode subnetting dalam jaringan kompu
 | A4 | Hololive -> HoloID -> holoro | 2 | /30 | 
 | A5  | Hololive -> HoloID -> holoro -> Switch7 -> Ollie -> Switch7 -> Anya -> Switch7 -> Reine | 34 | /26 | 
 | A6 | Hololive -> HoloID -> holoh3ro | 2 | /30 | 
-| A7  | Hololive -> HoloID -> holoh3ro -> Switch8 -> Zeta -> Switch8 -> Kaela -> Switch8 -> Kobo | 29 | /33 | 
+| A7  | Hololive -> HoloID -> holoh3ro -> Switch8 -> Zeta -> Switch8 -> Kaela -> Switch8 -> Kobo | 299 | /23 | 
 | A8 | Hololive -> HoloJP | 2 | /30 | 
 | A9  |Hololive -> HoloJP -> Switch1 -> DEV_IS -> Switch1 -> GEN:0 | 3 | /29 | 
 | A10 |Hololive -> HoloJP -> Switch1 -> DEV_IS -> Re:Gloss -> Ririka_Raden -> Re:Gloss -> Ao -> Re:Gloss-> Hajime_Kanade | 14 | /28 | 
