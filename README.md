@@ -22,6 +22,10 @@ CIDR (Classless Inter-Domain Routing) adalah metode dalam jaringan komputer untu
 ### VLSM 
 VLSM (Variable Length Subnet Mask) adalah metode subnetting dalam jaringan komputer yang memungkinkan penggunaan subnet mask dengan panjang yang berbeda-beda untuk setiap subnet dalam suatu jaringan IP. VLSM dikenal sebagai metode subnetting yang efisien karena memaksimalkan alokasi alamat IP berdasarkan kebutuhan jumlah host dalam tiap subnet.
 
+## VLSM Tree 
+
+![alt text](Tree.png)
+
 ## Pembagian Subnet 
 
 ![alt text](CIDR_A.png)
