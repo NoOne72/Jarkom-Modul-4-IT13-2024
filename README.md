@@ -15,9 +15,12 @@
 
 ![alt text](GNS_A.png)
 
-## CIDR
-### Definisi 
+## Definisi
+### CIDR
 CIDR (Classless Inter-Domain Routing) adalah metode dalam jaringan komputer untuk mengalokasikan alamat IP dan mengatur rute IP dengan lebih efisien. Berbeda dengan sistem subnetting berbasis classful (di mana jaringan dibagi dalam kelas-kelas A, B, dan C dengan ukuran subnet yang sudah tetap), CIDR memperkenalkan fleksibilitas dengan menggunakan notasi prefix untuk menunjukkan panjang subnet mask. Hal ini memungkinkan pembagian alamat IP sesuai kebutuhan, tanpa harus bergantung pada batasan kelas.
+
+### VLSM 
+VLSM (Variable Length Subnet Mask) adalah metode subnetting dalam jaringan komputer yang memungkinkan penggunaan subnet mask dengan panjang yang berbeda-beda untuk setiap subnet dalam suatu jaringan IP. VLSM dikenal sebagai metode subnetting yang efisien karena memaksimalkan alokasi alamat IP berdasarkan kebutuhan jumlah host dalam tiap subnet.
 
 ## Pembagian Subnet 
 
@@ -61,7 +64,7 @@ CIDR (Classless Inter-Domain Routing) adalah metode dalam jaringan komputer untu
 | A6     | 10.70.19.60/30   | 255.255.255.252   | 10.70.19.63    | 10.70.19.61 - 10.70.19.62     |
 | A7     | 10.70.16.0/23    | 255.255.254.0     | 10.70.17.255   | 10.70.16.1 - 10.70.17.254     |
 | A8     | 10.70.19.64/30   | 255.255.255.252   | 10.70.19.67    | 10.70.19.65 - 10.70.19.66     |
-| A9     | 10.70.19.68/30   | 255.255.255.252   | 10.70.19.71    | 10.70.19.69 - 10.70.19.70     |
+| A9     | 10.70.19.96/29   | 255.255.255.248   | 10.70.19.103   | 10.70.19.97 - 10.70.19.102    |
 | A10    | 10.70.19.32/28   | 255.255.255.240   | 10.70.19.47    | 10.70.19.33 - 10.70.19.46     |
 | A11    | 10.70.0.0/21     | 255.255.248.0     | 10.70.7.255    | 10.70.0.1 - 10.70.7.254       |
 | A12    | 10.70.14.0/23    | 255.255.254.0     | 10.70.15.255   | 10.70.14.1 - 10.70.15.254     |
@@ -72,7 +75,508 @@ CIDR (Classless Inter-Domain Routing) adalah metode dalam jaringan komputer untu
 | A17    | 10.70.19.0/27    | 255.255.255.224   | 10.70.19.31    | 10.70.19.1 - 10.70.19.30      |
 | A18    | 10.70.19.84/30   | 255.255.255.252   | 10.70.19.87    | 10.70.19.85 - 10.70.19.86     |
 | A19    | 10.70.12.0/23    | 255.255.254.0     | 10.70.13.255   | 10.70.12.1 - 10.70.13.254     |
-| A20    | 10.70.19.88/30   | 255.255.255.252   | 10.70.19.91    | 10.70.19.89 - 10.70.19.90     |
-| A21    | 10.70.19.92/30   | 255.255.255.252   | 10.70.19.95    | 10.70.19.93 - 10.70.19.94     |
+| A20    | 10.70.19.104/29  | 255.255.255.248   | 10.70.19.111   | 10.70.19.105 - 10.70.19.110   |
+| A21    | 10.70.19.112/29  | 255.255.255.248   | 10.70.19.119   | 10.70.19.113 - 10.70.19.118   |
 | A22    | 10.70.18.128/26  | 255.255.255.192   | 10.70.18.191   | 10.70.18.129 - 10.70.18.190   |
 
+## Konfigurasi Tiap Subnet 
+### A1 
+### Hololive (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.49 255.255.255.252
+no shutdown
+```
+### Holo-ID (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.50 255.255.255.252
+no shutdown
+```
+### A2 
+### Holo-ID (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.53 255.255.255.252
+no shutdown
+```
+### AREA15 (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.54 255.255.255.252
+no shutdown
+```
+### A3
+### AREA15 (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.8.1 255.255.252.0
+no shutdown
+```
+### Moona 
+```
+Interface fa0
+IP Address: 10.70.8.2
+Subnet Mask: 255.255.252.0
+Gateway: 10.70.8.1
+```
+### Risu 
+```
+Interface fa0
+IP Address: 10.70.8.3
+Subnet Mask: 255.255.252.0
+Gateway: 10.70.8.1
+```
+### lofi
+```
+Interface fa0
+IP Address: 10.70.8.4
+Subnet Mask: 255.255.252.0
+Gateway: 10.70.8.1
+```
+### A4 
+### Holo-ID (Router) 
+```
+enable
+configure terminal
+interface fa1/0
+ip address 10.70.19.57 255.255.255.252
+no shutdown
+```
+### holoro (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.58 255.255.255.252
+no shutdown
+```
+### A5 
+### holoro (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.18.193 255.255.255.192
+no shutdown
+```
+### Ollie 
+```
+Interface fa0
+IP Address: 10.70.18.194
+Subnet Mask: 255.255.255.192
+Gateway: 10.70.18.193
+```
+### Anya 
+```
+Interface fa0
+IP Address: 10.70.18.195
+Subnet Mask: 255.255.255.192
+Gateway: 10.70.18.193
+```
+### Reine 
+```
+Interface fa0
+IP Address: 10.70.18.196
+Subnet Mask: 255.255.255.192
+Gateway: 10.70.18.193
+```
+### A6 
+### Holo-ID (Router) 
+```
+enable
+configure terminal
+interface fa1/1
+ip address 192.245.19.61 255.255.255.252
+no shutdown
+```
+### holoh3ro (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 192.245.19.62 255.255.255.252
+no shutdown
+```
+### A7 
+### holoh3ro (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.16.1 255.255.254.0
+no shutdown
+```
+### Zeta 
+```
+Interface fa0
+IP Address: 10.70.16.2
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.16.1
+```
+### Kaela 
+```
+Interface fa0
+IP Address: 10.70.16.3
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.16.1
+```
+### Kobo 
+```
+Interface fa0
+IP Address: 10.70.16.4
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.16.1
+```
+### A8 
+### Hololive (Router) 
+```
+enable
+configure terminal
+interface fa1/0
+ip address 10.70.19.65 255.255.255.252
+no shutdown
+```
+### HoloJP (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.66 255.255.255.252
+no shutdown
+```
+### A9 
+### HoloJP (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.97 255.255.255.248
+no shutdown
+```
+### DEV_IS (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.98 255.255.255.248
+no shutdown
+```
+### GEN:0 (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.99 255.255.255.248
+no shutdown
+```
+### A10 
+### DEV_IS (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.33 255.255.255.240
+no shutdown
+```
+### Ririka_Rade 
+```
+Interface fa0
+IP Address: 10.70.19.34
+Subnet Mask: 255.255.255.240
+Gateway: 10.70.19.33
+```
+### Ao 
+```
+Interface fa0
+IP Address: 10.70.19.35
+Subnet Mask: 255.255.255.240
+Gateway: 10.70.19.33
+```
+### Hajime_Kanade 
+```
+Interface fa0
+IP Address: 10.70.19.36
+Subnet Mask: 255.255.255.240
+Gateway: 10.70.19.33
+```
+### A11 
+### GEN:0 (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.0.1 255.255.248.0
+no shutdown
+```
+### GEN:1 (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.0.2 255.255.248.0
+no shutdown
+```
+### MiComet 
+```
+Interface fa0
+IP Address: 10.70.0.3
+Subnet Mask: 255.255.248.0
+Gateway: 10.70.0.1
+```
+### Soro_Robo_AZK 
+```
+Interface fa0
+IP Address: 10.70.0.4
+Subnet Mask: 255.255.248.0
+Gateway: 10.70.0.1
+```
+### A12 
+### GEN:1 (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.14.1 255.255.254.0
+no shutdown
+```
+### FBK_Matsuri 
+```
+Interface fa0
+IP Address: 10.70.14.2
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.14.1
+```
+### Aki_Hachama 
+```
+Interface fa0
+IP Address: 10.70.14.3
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.14.1
+```
+### A13 
+### GEN:1 (Router) 
+```
+enable
+configure terminal
+interface fa1/0
+ip address 10.70.19.73 255.255.255.252
+no shutdown
+```
+### GAMERS (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.74 255.255.255.252
+no shutdown
+```
+### A14 
+### GAMERS (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.18.1 255.255.255.128
+no shutdown
+```
+### Kerone 
+```
+Interface fa0
+IP Address: 10.70.18.2
+Subnet Mask: 255.255.255.128
+Gateway: 10.70.18.1
+```
+### Okayu 
+```
+Interface fa0
+IP Address: 10.70.18.3
+Subnet Mask: 255.255.255.128
+Gateway: 10.70.18.1
+```
+### Mio 
+```
+Interface fa0
+IP Address: 10.70.18.4
+Subnet Mask: 255.255.255.128
+Gateway: 10.70.18.1
+```
+### A15 
+### Hololive (Router) 
+```
+enable
+configure terminal
+interface fa1/1
+ip address 10.70.19.77 255.255.255.252
+no shutdown
+```
+### HoloEN (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.78 255.255.255.252
+no shutdown
+```
+### A16 
+### HoloEN (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.81 255.255.255.252
+no shutdown
+```
+### HoloAdvent (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.82 255.255.255.252
+no shutdown
+```
+### A17 
+### HoloAdvent (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.1 255.255.255.224
+no shutdown
+```
+### FuwaMoco 
+```
+Interface fa0
+IP Address: 10.70.19.2
+Subnet Mask: 255.255.224.0
+Gateway: 10.70.19.1
+```
+### Shiori_Nerissa 
+```
+Interface fa0
+IP Address: 10.70.19.3
+Subnet Mask: 255.255.224.0
+Gateway: 10.70.19.1
+```
+### Biboo 
+```
+Interface fa0
+IP Address: 10.70.19.4
+Subnet Mask: 255.255.224.0
+Gateway: 10.70.19.1
+```
+### A18 
+### HoloEN (Router) 
+```
+enable
+configure terminal
+interface fa1/0
+ip address 10.70.19.85 255.255.255.252
+no shutdown
+```
+### Holo-Myth (Router) 
+```
+enable
+configure terminal
+interface fa1/0
+ip address 10.70.19.86 255.255.255.252
+no shutdown
+```
+### A19 
+### Holo-Myth (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.12.1 255.255.254.0
+no shutdown
+```
+### Gura_Ame_Ina 
+```
+Interface fa0
+IP Address: 10.70.12.2
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.12.1
+```
+### Kiara_Calli 
+```
+Interface fa0
+IP Address: 10.70.12.3
+Subnet Mask: 255.255.254.0
+Gateway: 10.70.12.1
+```
+### A20 
+### Holo-Myth (Router) 
+```
+enable
+configure terminal
+interface fa1/0
+ip address 10.70.19.105 255.255.255.248
+no shutdown
+```
+### Project-Hope (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.106 255.255.255.248
+no shutdown
+```
+### Holo-Council (Router) 
+```
+enable
+configure terminal
+interface fa0/0
+ip address 10.70.19.107 255.255.255.248
+no shutdown
+```
+### A21 
+### Project-Hope (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.19.113 255.255.255.248
+no shutdown
+```
+### Irys 
+```
+Interface fa0
+IP Address: 10.70.19.114
+Subnet Mask: 255.255.255.248
+Gateway: 10.70.19.113
+```
+### A22 
+### Holo-Council (Router) 
+```
+enable
+configure terminal
+interface fa0/1
+ip address 10.70.18.129 255.255.255.192
+no shutdown
+```
+### Kronii_Mumeii 
+```
+Interface fa0
+IP Address: 10.70.18.130
+Subnet Mask: 255.255.255.192
+Gateway: 10.70.18.129
+```
+### Bae_Fauna 
+```
+Interface fa0
+IP Address: 10.70.18.131
+Subnet Mask: 255.255.255.192
+Gateway: 10.70.18.129
+```
+## Routing
