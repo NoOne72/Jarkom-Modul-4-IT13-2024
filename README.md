@@ -201,7 +201,7 @@ Gateway: 10.70.18.193
 enable
 configure terminal
 interface fa1/1
-ip address 192.245.19.61 255.255.255.252
+ip address 10.70.19.61 255.255.255.252
 no shutdown
 ```
 ### holoh3ro (Router) 
@@ -209,7 +209,7 @@ no shutdown
 enable
 configure terminal
 interface fa0/0
-ip address 192.245.19.62 255.255.255.252
+ip address 10.70.19.62 255.255.255.252
 no shutdown
 ```
 ### A7 
