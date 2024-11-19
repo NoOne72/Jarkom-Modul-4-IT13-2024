@@ -584,3 +584,170 @@ Subnet Mask: 255.255.255.192
 Gateway: 10.70.18.129
 ```
 ## Routing
+## Sisi Holo-ID
+### Hololive 
+```
+enable
+configure terminal
+ip route 10.70.19.52 255.255.255.252 10.70.19.50 
+ip route 10.70.8.0 255.255.252.0 10.70.19.50 
+ip route 10.70.19.56 255.255.255.252 10.70.19.50 
+ip route 10.70.18.192 255.255.255.192 10.70.19.50 
+ip route 10.70.19.60 255.255.255.252 10.70.19.50 
+ip route 10.70.16.0 255.255.254.0 10.70.19.50 
+do write
+```
+### Holo-ID
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.49
+ip route 10.70.8.0 255.255.252.0 10.70.19.54
+ip route 10.70.18.192 255.255.255.192 10.70.19.58
+ip route 10.70.16.0 255.255.254.0 10.70.19.62
+do write
+```
+### Area15
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.53
+do write
+```
+### holoro 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.57
+do write
+```
+### holoh3ro
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.61
+do write
+```
+
+## Sisi Holo-JP
+### Hololive 
+```
+enable
+configure terminal
+ip route 10.70.19.96 255.255.255.248 10.70.19.66
+ip route 10.70.19.32 255.255.255.240 10.70.19.66
+ip route 10.70.0.0 255.255.248.0 10.70.19.66
+ip route 10.70.14.0 255.255.254.0 10.70.19.66
+ip route 10.70.19.72 255.255.255.252 10.70.19.66
+ip route 10.70.18.0 255.255.255.128 10.70.19.66
+do write
+```
+### Holo-JP
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.65
+ip route 10.70.19.32 255.255.255.240 10.70.19.98
+ip route 10.70.0.0 255.255.248.0 10.70.19.99
+ip route 10.70.14.0 255.255.254.0 10.70.19.99
+ip route 10.70.19.72 255.255.255.252 10.70.19.99
+ip route 10.70.18.0 255.255.255.128 10.70.19.99
+do write
+```
+### Dev_IS
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.97
+ip route 10.70.0.0 255.255.248.0 10.70.19.99
+ip route 10.70.14.0 255.255.254.0 10.70.19.99
+ip route 10.70.19.72 255.255.255.252 10.70.19.99
+ip route 10.70.18.0 255.255.255.128 10.70.19.99
+do write
+```
+### GEN:0 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.97
+ip route 10.70.19.32 255.255.255.240 10.70.19.98
+ip route 10.70.14.0 255.255.254.0 10.70.0.2
+ip route 10.70.19.72 255.255.255.252 10.70.0.2
+ip route 10.70.18.0 255.255.255.128 10.70.0.2
+do write
+```
+### GEN:1 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.0.1
+ip route 10.70.18.0 255.255.255.128 10.70.19.74
+do write
+```
+### Gamers
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.73
+do write
+```
+
+## Sisi HoloEN 
+### Hololive 
+```
+enable
+configure terminal
+ip route 10.70.19.80 255.255.255.252 10.70.19.78
+ip route 10.70.19.0 255.255.255.224 10.70.19.78
+ip route 10.70.19.84 255.255.255.252 10.70.19.78
+ip route 10.70.12.0 255.255.254.0 10.70.19.78
+ip route 10.70.19.104 255.255.255.248 10.70.19.78
+ip route 10.70.19.112 255.255.255.248 10.70.19.78
+ip route 10.70.18.128 255.255.255.192 10.70.19.78
+do write
+```
+### HoloEN 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.77
+ip route 10.70.19.0 255.255.255.224 10.70.19.82
+ip route 10.70.12.0 255.255.254.0 10.70.19.86
+ip route 10.70.19.104 255.255.255.248 10.70.19.86
+ip route 10.70.19.112 255.255.255.248 10.70.19.86
+ip route 10.70.18.128 255.255.255.192 10.70.19.86
+do write
+```
+### HoloAdvent 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.81
+do write
+```
+### Holo-Myth 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.85
+ip route 10.70.19.112 255.255.255.248 10.70.19.106
+ip route 10.70.18.128 255.255.255.192 10.70.19.107
+do write
+```
+### Project-Hope 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.105
+ip route 10.70.18.128 255.255.255.192 10.70.19.107
+do write
+```
+### Holo-Council 
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.70.19.105
+ip route 10.70.19.112 255.255.255.248 10.70.19.106
+do write
+```
+# Testing
